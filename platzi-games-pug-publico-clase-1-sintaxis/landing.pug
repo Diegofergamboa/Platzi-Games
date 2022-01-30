@@ -5,6 +5,15 @@
 -var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
 -var usuario = "david"
 
+//- Creando mixin
+mixin caja(imagen,titulo,contenido)
+	.caja 
+	.caja__imagen: img(src="images/"+imagen)
+	.caja__contenido 
+		h3=titulo 
+		p=contenido
+		a.buton Leer más
+
 doctype html
 html(lang="en")
 	head
@@ -30,4 +39,9 @@ html(lang="en")
 		ul 
 			each titulo in titulos
 				li=titulo
+		main.contenido
+			+caja('imagen.png' ,titulos[1],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?')
+			+caja('imagen.png' ,titulos[2],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?')
+			+caja('imagen.png' ,titulos[3],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?')
+
 
