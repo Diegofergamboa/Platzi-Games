@@ -12,11 +12,10 @@ mixin caja(imagen,titulo,contenido)
 	.caja__contenido 
 		h3=titulo 
 		p=contenido
-		a.buton Leer más
 
 doctype html
 html(lang="en")
-	
+	includes componentes/head.pug
 	body
 		header
 			h1 #{titulo2}
@@ -31,9 +30,7 @@ html(lang="en")
 				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?
 					span expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio.
 				a.boton Leer más!
-		ul 
-			each titulo in titulos
-				li=titulo
+
 		main.contenido
 			+caja('imagen.png' ,titulos[1],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?')
 			+caja('imagen.png' ,titulos[2],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?')
