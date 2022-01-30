@@ -1,28 +1,5 @@
-//- Declarar variables 
--var titulo = "Titulo principal"
--var titulo2 = "Platzi Games"
-//- Declarar varias variables
--var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "david"
-
-//- Creando mixin
-mixin caja(imagen,titulo,contenido)
-	.caja 
-	.caja__imagen: img(src="images/"+imagen)
-	.caja__contenido 
-		h3=titulo 
-		p=contenido
-
-doctype html
-html(lang="en")
-	includes componentes/head.pug
-	body
-		header
-			h1 #{titulo2}
-			if usuario 
-				a Hola #{usuario}
-			else 
-				a.boton Registro 
+extend componentes/plantilla.pug
+block contenidos
 		section.intro 
 			.intro__imagen: img(src="images/imagen.png")
 			.intro__contenido
