@@ -5,21 +5,17 @@
 	padding-top: 15px;
 	margin: 0 auto;
 	justify-content: space-around;
-
 	@include caja;
 
 	h3 {
 		font-weight: 600;
 		font-size: 20px;
 		text-align: center;
-		text-transform: uppercase;
-		font-family: $Fuente2;
+		@include titulos($Fuente2);
 	}
 	span {
 		font-size: 12px;
 		text-align: center;
-		text-transform: uppercase;
-		font-family: $Fuente2;
-		color: $color-claro;
+		@include titulos($Fuente2);
 	}
 }

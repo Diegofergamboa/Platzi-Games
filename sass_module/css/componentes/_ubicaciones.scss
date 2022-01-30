@@ -1,9 +1,9 @@
 .ubicacion--perfil {
 	width: 50%;
-	height: 30px;
-	margin: 30px 0 0 50px;
+	height: 70px;
+	margin: 30px auto 30px auto;
+	text-align: center;
 	@include caja;
-	
 	i {
 		display: block;
 		float: left;
@@ -16,6 +16,7 @@
 		font-weight: 600;
 		font-size: 20px;
 		font-family: $Fuente2;
+		color: get-opacity($color-primario, 50%);
 	}
 	h3 {
 		text-transform: uppercase;
