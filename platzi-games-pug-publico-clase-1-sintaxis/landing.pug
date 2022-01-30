@@ -1,19 +1,25 @@
+//- Declarar variables 
+-var titulo = "Titulo principal"
+-var titulo2 = "Platzi Games"
+//- Declarar varias variables
+-var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
+
 doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		link(rel="stylesheet" , herf="platzi-games-pug-publico-clase-1-sintaxis/css/ejercicio-pug.css" )
+		link(rel="stylesheet" , href="platzi-games-pug-publico-clase-1-sintaxis/css/ejercicio-pug.css" )
 		title Pagina web nueva
 	body
-		header 
-			h1 PlatziGames 
+		header
+			h1 #{titulo2}
 			a.boton Registro 
 		section.intro 
 			.intro__imagen: img(src="images/imagen.png")
 			.intro__contenido
-				h2 Titulo principal 
+				h2=  titulos[0]  
 				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium quae ratione ad ipsa, maxime at itaque magni consequatur expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio. Deleniti, ullam omnis?
 					span expedita pariatur dignissimos laudantium doloribus. Vitae, tenetur distinctio.
 				a.boton Leer más!
